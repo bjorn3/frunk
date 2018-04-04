@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `There` struct in crate `frunk_core`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, There">
+
+    <title>frunk_core::hlist::There - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css"
+          id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle">
+    <script src="../../storage.js"></script>
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Struct There</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-Selector%3CFromTail%2C%20There%3CTailIndex%3E%3E">Selector&lt;FromTail, There&lt;TailIndex&gt;&gt;</a><a href="#impl-Plucker%3CFromTail%2C%20There%3CTailIndex%3E%3E">Plucker&lt;FromTail, There&lt;TailIndex&gt;&gt;</a><a href="#impl-LiftFrom%3CValAtIx%2C%20There%3CTailIx%3E%3E">LiftFrom&lt;ValAtIx, There&lt;TailIx&gt;&gt;</a><a href="#impl-CoprodInjector%3CI%2C%20There%3CTailIndex%3E%3E">CoprodInjector&lt;I, There&lt;TailIndex&gt;&gt;</a><a href="#impl-CoproductSelector%3CFromTail%2C%20There%3CTailIndex%3E%3E">CoproductSelector&lt;FromTail, There&lt;TailIndex&gt;&gt;</a><a href="#impl-CoproductTaker%3CFromTail%2C%20There%3CTailIndex%3E%3E">CoproductTaker&lt;FromTail, There&lt;TailIndex&gt;&gt;</a><a href="#impl-CoprodUninjector%3CT%2C%20There%3CN%3E%3E">CoprodUninjector&lt;T, There&lt;N&gt;&gt;</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a></div></div><p class='location'><a href='../index.html'>frunk_core</a>::<wbr><a href='index.html'>hlist</a></p><script>window.sidebarCurrent = {name: 'There', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../theme.js"></script>
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content"><h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>frunk_core</a>::<wbr><a href='index.html'>hlist</a>::<wbr><a class="struct" href=''>There</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/frunk_core/hlist.rs.html#455' title='goto source code'>[src]</a></span></h1><div class="docblock type-decl"><pre class='rust struct'>pub struct There&lt;T&gt;(_);</pre></div><div class='docblock'><p>Used as an index into an <code>HList</code>.</p>
+<p><code>There&lt;T&gt;</code> is 1 + <code>T</code>.</p>
+<p>Users should normally allow type inference to create this type.</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+            <div id='implementations-list'>
+        <h3 id='impl-Selector%3CFromTail%2C%20There%3CTailIndex%3E%3E' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;Head, Tail, FromTail, TailIndex&gt; <a class="trait" href="../../frunk_core/hlist/trait.Selector.html" title="trait frunk_core::hlist::Selector">Selector</a>&lt;FromTail, <a class="struct" href="../../frunk_core/hlist/struct.There.html" title="struct frunk_core::hlist::There">There</a>&lt;TailIndex&gt;&gt; for <a class="struct" href="../../frunk_core/hlist/struct.HCons.html" title="struct frunk_core::hlist::HCons">HCons</a>&lt;Head, Tail&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;Tail: <a class="trait" href="../../frunk_core/hlist/trait.Selector.html" title="trait frunk_core::hlist::Selector">Selector</a>&lt;FromTail, TailIndex&gt;,&nbsp;</span></code><a href='#impl-Selector%3CFromTail%2C%20There%3CTailIndex%3E%3E' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/hlist.rs.html#486-493' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.get' class="method"><span id='get.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='../../frunk_core/hlist/trait.Selector.html#tymethod.get' class='fnname'>get</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>FromTail</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/hlist.rs.html#490-492' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Borrow an element by type from an HList. <a href="../../frunk_core/hlist/trait.Selector.html#tymethod.get">Read more</a></p>
+</div></div><h3 id='impl-Plucker%3CFromTail%2C%20There%3CTailIndex%3E%3E' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;Head, Tail, FromTail, TailIndex&gt; <a class="trait" href="../../frunk_core/hlist/trait.Plucker.html" title="trait frunk_core::hlist::Plucker">Plucker</a>&lt;FromTail, <a class="struct" href="../../frunk_core/hlist/struct.There.html" title="struct frunk_core::hlist::There">There</a>&lt;TailIndex&gt;&gt; for <a class="struct" href="../../frunk_core/hlist/struct.HCons.html" title="struct frunk_core::hlist::HCons">HCons</a>&lt;Head, Tail&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;Tail: <a class="trait" href="../../frunk_core/hlist/trait.Plucker.html" title="trait frunk_core::hlist::Plucker">Plucker</a>&lt;FromTail, TailIndex&gt;,&nbsp;</span></code><a href='#impl-Plucker%3CFromTail%2C%20There%3CTailIndex%3E%3E' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/hlist.rs.html#531-550' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='docblock'><p>Implementation when the pluck target is in the tail</p>
+</div><div class='impl-items'><h4 id='associatedtype.Remainder' class="type"><span id='Remainder.t' class='invisible'><code>type <a href='../../frunk_core/hlist/trait.Plucker.html#associatedtype.Remainder' class="type">Remainder</a> = <a class="struct" href="../../frunk_core/hlist/struct.HCons.html" title="struct frunk_core::hlist::HCons">HCons</a>&lt;Head, &lt;Tail as <a class="trait" href="../../frunk_core/hlist/trait.Plucker.html" title="trait frunk_core::hlist::Plucker">Plucker</a>&lt;FromTail, TailIndex&gt;&gt;::<a class="type" href="../../frunk_core/hlist/trait.Plucker.html#associatedtype.Remainder" title="type frunk_core::hlist::Plucker::Remainder">Remainder</a>&gt;</code></span></h4>
+<div class='docblock'><p>What is left after you pluck the target from the Self</p>
+</div><h4 id='method.pluck' class="method"><span id='pluck.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='../../frunk_core/hlist/trait.Plucker.html#tymethod.pluck' class='fnname'>pluck</a>(self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">(</a>FromTail, Self::<a class="type" href="../../frunk_core/hlist/trait.Plucker.html#associatedtype.Remainder" title="type frunk_core::hlist::Plucker::Remainder">Remainder</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">)</a></code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/hlist.rs.html#537-549' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Remove an element by type from an HList. <a href="../../frunk_core/hlist/trait.Plucker.html#tymethod.pluck">Read more</a></p>
+</div></div><h3 id='impl-LiftFrom%3CValAtIx%2C%20There%3CTailIx%3E%3E' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;Head, Tail, ValAtIx, TailIx&gt; <a class="trait" href="../../frunk_core/hlist/trait.LiftFrom.html" title="trait frunk_core::hlist::LiftFrom">LiftFrom</a>&lt;ValAtIx, <a class="struct" href="../../frunk_core/hlist/struct.There.html" title="struct frunk_core::hlist::There">There</a>&lt;TailIx&gt;&gt; for <a class="struct" href="../../frunk_core/hlist/struct.HCons.html" title="struct frunk_core::hlist::HCons">HCons</a>&lt;Head, Tail&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;Head: <a class="trait" href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html" title="trait core::default::Default">Default</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;Tail: <a class="trait" href="../../frunk_core/hlist/trait.HList.html" title="trait frunk_core::hlist::HList">HList</a> + <a class="trait" href="../../frunk_core/hlist/trait.LiftFrom.html" title="trait frunk_core::hlist::LiftFrom">LiftFrom</a>&lt;ValAtIx, TailIx&gt;,&nbsp;</span></code><a href='#impl-LiftFrom%3CValAtIx%2C%20There%3CTailIx%3E%3E' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/hlist.rs.html#1117-1125' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.lift_from' class="method"><span id='lift_from.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='../../frunk_core/hlist/trait.LiftFrom.html#tymethod.lift_from' class='fnname'>lift_from</a>(part: ValAtIx) -&gt; Self</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/hlist.rs.html#1122-1124' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Performs the indexed conversion.</p>
+</div></div><h3 id='impl-CoprodInjector%3CI%2C%20There%3CTailIndex%3E%3E' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;Head, I, Tail, TailIndex&gt; <a class="trait" href="../../frunk_core/coproduct/trait.CoprodInjector.html" title="trait frunk_core::coproduct::CoprodInjector">CoprodInjector</a>&lt;I, <a class="struct" href="../../frunk_core/hlist/struct.There.html" title="struct frunk_core::hlist::There">There</a>&lt;TailIndex&gt;&gt; for <a class="enum" href="../../frunk_core/coproduct/enum.Coproduct.html" title="enum frunk_core::coproduct::Coproduct">Coproduct</a>&lt;Head, Tail&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;Tail: <a class="trait" href="../../frunk_core/coproduct/trait.CoprodInjector.html" title="trait frunk_core::coproduct::CoprodInjector">CoprodInjector</a>&lt;I, TailIndex&gt;,&nbsp;</span></code><a href='#impl-CoprodInjector%3CI%2C%20There%3CTailIndex%3E%3E' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/coproduct.rs.html#477-485' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.inject' class="method"><span id='inject.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='../../frunk_core/coproduct/trait.CoprodInjector.html#tymethod.inject' class='fnname'>inject</a>(to_insert: I) -&gt; Self</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/coproduct.rs.html#481-484' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Instantiate a coproduct from an element. <a href="../../frunk_core/coproduct/trait.CoprodInjector.html#tymethod.inject">Read more</a></p>
+</div></div><h3 id='impl-CoproductSelector%3CFromTail%2C%20There%3CTailIndex%3E%3E' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;Head, FromTail, Tail, TailIndex&gt; <a class="trait" href="../../frunk_core/coproduct/trait.CoproductSelector.html" title="trait frunk_core::coproduct::CoproductSelector">CoproductSelector</a>&lt;FromTail, <a class="struct" href="../../frunk_core/hlist/struct.There.html" title="struct frunk_core::hlist::There">There</a>&lt;TailIndex&gt;&gt; for <a class="enum" href="../../frunk_core/coproduct/enum.Coproduct.html" title="enum frunk_core::coproduct::Coproduct">Coproduct</a>&lt;Head, Tail&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;Tail: <a class="trait" href="../../frunk_core/coproduct/trait.CoproductSelector.html" title="trait frunk_core::coproduct::CoproductSelector">CoproductSelector</a>&lt;FromTail, TailIndex&gt;,&nbsp;</span></code><a href='#impl-CoproductSelector%3CFromTail%2C%20There%3CTailIndex%3E%3E' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/coproduct.rs.html#522-534' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.get-1' class="method"><span id='get.v-1' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='../../frunk_core/coproduct/trait.CoproductSelector.html#tymethod.get' class='fnname'>get</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>FromTail&gt;</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/coproduct.rs.html#527-533' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Borrow an element from a coproduct by type. <a href="../../frunk_core/coproduct/trait.CoproductSelector.html#tymethod.get">Read more</a></p>
+</div></div><h3 id='impl-CoproductTaker%3CFromTail%2C%20There%3CTailIndex%3E%3E' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;Head, FromTail, Tail, TailIndex&gt; <a class="trait" href="../../frunk_core/coproduct/trait.CoproductTaker.html" title="trait frunk_core::coproduct::CoproductTaker">CoproductTaker</a>&lt;FromTail, <a class="struct" href="../../frunk_core/hlist/struct.There.html" title="struct frunk_core::hlist::There">There</a>&lt;TailIndex&gt;&gt; for <a class="enum" href="../../frunk_core/coproduct/enum.Coproduct.html" title="enum frunk_core::coproduct::Coproduct">Coproduct</a>&lt;Head, Tail&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;Tail: <a class="trait" href="../../frunk_core/coproduct/trait.CoproductTaker.html" title="trait frunk_core::coproduct::CoproductTaker">CoproductTaker</a>&lt;FromTail, TailIndex&gt;,&nbsp;</span></code><a href='#impl-CoproductTaker%3CFromTail%2C%20There%3CTailIndex%3E%3E' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/coproduct.rs.html#569-581' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.take' class="method"><span id='take.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='../../frunk_core/coproduct/trait.CoproductTaker.html#tymethod.take' class='fnname'>take</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;FromTail&gt;</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/coproduct.rs.html#574-580' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Retrieve an element from a coproduct by type, ignoring all others. <a href="../../frunk_core/coproduct/trait.CoproductTaker.html#tymethod.take">Read more</a></p>
+</div></div><h3 id='impl-CoprodUninjector%3CT%2C%20There%3CN%3E%3E' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;Hd, Tl, T, N&gt; <a class="trait" href="../../frunk_core/coproduct/trait.CoprodUninjector.html" title="trait frunk_core::coproduct::CoprodUninjector">CoprodUninjector</a>&lt;T, <a class="struct" href="../../frunk_core/hlist/struct.There.html" title="struct frunk_core::hlist::There">There</a>&lt;N&gt;&gt; for <a class="enum" href="../../frunk_core/coproduct/enum.Coproduct.html" title="enum frunk_core::coproduct::Coproduct">Coproduct</a>&lt;Hd, Tl&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;Tl: <a class="trait" href="../../frunk_core/coproduct/trait.CoprodUninjector.html" title="trait frunk_core::coproduct::CoprodUninjector">CoprodUninjector</a>&lt;T, N&gt;,&nbsp;</span></code><a href='#impl-CoprodUninjector%3CT%2C%20There%3CN%3E%3E' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/coproduct.rs.html#700-712' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='associatedtype.Remainder-1' class="type"><span id='Remainder.t-1' class='invisible'><code>type <a href='../../frunk_core/coproduct/trait.CoprodUninjector.html#associatedtype.Remainder' class="type">Remainder</a> = <a class="enum" href="../../frunk_core/coproduct/enum.Coproduct.html" title="enum frunk_core::coproduct::Coproduct">Coproduct</a>&lt;Hd, Tl::<a class="type" href="../../frunk_core/coproduct/trait.CoprodUninjector.html#associatedtype.Remainder" title="type frunk_core::coproduct::CoprodUninjector::Remainder">Remainder</a>&gt;</code></span></h4>
+<h4 id='method.uninject' class="method"><span id='uninject.v' class='invisible'><table class='table-display'><tbody><tr><td><code>fn <a href='../../frunk_core/coproduct/trait.CoprodUninjector.html#tymethod.uninject' class='fnname'>uninject</a>(self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;T, Self::<a class="type" href="../../frunk_core/coproduct/trait.CoprodUninjector.html#associatedtype.Remainder" title="type frunk_core::coproduct::CoprodUninjector::Remainder">Remainder</a>&gt;</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/frunk_core/coproduct.rs.html#706-711' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Attempt to extract a value from a coproduct (or get the remaining possibilities). <a href="../../frunk_core/coproduct/trait.CoprodUninjector.html#tymethod.uninject">Read more</a></p>
+</div></div></div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../frunk_core/hlist/struct.There.html" title="struct frunk_core::hlist::There">There</a>&lt;T&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a>,&nbsp;</span></code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;T&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../frunk_core/hlist/struct.There.html" title="struct frunk_core::hlist::There">There</a>&lt;T&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a>,&nbsp;</span></code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt><kbd>?</kbd></dt>
+                    <dd>Show this help dialog</dd>
+                    <dt><kbd>S</kbd></dt>
+                    <dd>Focus the search field</dd>
+                    <dt><kbd>↑</kbd></dt>
+                    <dd>Move up in search results</dd>
+                    <dt><kbd>↓</kbd></dt>
+                    <dd>Move down in search results</dd>
+                    <dt><kbd>↹</kbd></dt>
+                    <dd>Switch tab</dd>
+                    <dt><kbd>&#9166;</kbd></dt>
+                    <dd>Go to active search result</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "frunk_core";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
